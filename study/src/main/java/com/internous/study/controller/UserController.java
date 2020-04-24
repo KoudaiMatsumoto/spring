@@ -18,12 +18,11 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="register", method=RequestMethod.POST)
-	public String registerUser(
-			@ModelAttribute("userForm") UserForm form,
-			Model model) {
+	public String registerUser( @ModelAttribute("userForm") UserForm f, Model m) {
 		
-		model.addAttribute("userForm", form);
+		m.addAttribute("userForm", f);
 		return "register";
+		
 	}
-
+	
 }
